@@ -1,0 +1,138 @@
+Moduł 1: Warsztat i Kontrola Wersji
+Opis: Przygotowanie środowiska pracy, w którym będziesz pisać kod, oraz zabezpieczenie go w systemie kontroli wersji. Od tego zaczyna się każdy profesjonalny projekt.
+
+Czego musisz się nauczyć / co musisz ogarnąć:
+
+Podstawowe komendy Git (git init, add, commit, push, pull).
+
+Tworzenie gałęzi/branchy (git branch, checkout / switch).
+
+Konfiguracja wirtualnego środowiska w Pythonie (tzw. venv) – to bardzo ważne, żeby nie śmiecić w głównym systemie!
+
+Podpięcie lokalnego kodu pod repozytorium na GitHubie.
+
+
+
+
+
+
+Moduł 2: Architektura Obiektowa (OOP)
+Opis: Rozbicie planowanego kodu na niezależne pliki i klasy (wspomniani wcześniej "specjaliści"). Zbudujemy szkielet aplikacji.
+
+Czego musisz się nauczyć / co musisz ogarnąć:
+
+Tworzenie klas i obiektów w Pythonie (class, __init__, self).
+
+Tworzenie metod wewnątrz klas.
+
+Importowanie kodu pomiędzy różnymi plikami (np. jak użyć klasy z pliku nbp.py w pliku main.py).
+
+
+
+
+
+Moduł 3: "Rozmowa" z NBP (Pobieranie Danych z API)
+Opis: Twój program musi umieć "zadzwonić" pod adres NBP, zapytać o kursy walut i zrozumieć odpowiedź.
+
+Czego musisz się nauczyć / co musisz ogarnąć:
+
+Używanie zewnętrznej biblioteki requests w Pythonie (do zapytań HTTP).
+
+Zrozumienie, czym jest format danych JSON i jak go zamienić na słowniki/listy w Pythonie.
+
+Podstawowa obsługa błędów (np. co jeśli strona NBP nie działa? Słowo klucz: try... except).
+
+
+
+
+
+
+Moduł 4: Zapis do Excela
+Opis: Pobrane kursy (Euro, Dolar, Funt) trzeba estetycznie zapisać w pliku kalkulacyjnym.
+
+Czego musisz się nauczyć / co musisz ogarnąć:
+
+Wykorzystanie biblioteki do pracy z Excelem (np. openpyxl lub pandas).
+
+Tworzenie nowego pliku, zapisywanie danych w konkretnych komórkach i zapisywanie pliku na dysku.
+
+
+
+
+
+
+
+Moduł 5: Podbój Jiry (Autoryzacja i API)
+Opis: To będzie jedno z większych wyzwań. Program musi zalogować się do Jiry jako Ty, stworzyć nowe zadanie (ticket) i dodać do niego wygenerowany wcześniej plik Excel.
+
+Czego musisz się nauczyć / co musisz ogarnąć:
+
+Generowanie API Tokena w ustawieniach Jiry.
+
+Wysyłanie zapytań typu POST przez bibliotekę requests (tworzenie zasobów).
+
+Dodawanie załączników do requestów HTTP.
+
+
+
+
+
+
+
+Moduł 6: Władca Czasu (Logika Dat, Święta i "Backdoor")
+Opis: Serce logiki Twojej aplikacji. Musisz wyliczyć, za jakie dni pobrać kursy, omijając weekendy i polskie święta. Zrobimy też tryb testowy.
+
+Czego musisz się nauczyć / co musisz ogarnąć:
+
+Wbudowany w Pythona moduł datetime (operacje na datach, dodawanie/odejmowanie dni).
+
+Wykorzystanie biblioteki holidays do automatycznego rozpoznawania polskich świąt ustawowych.
+
+Odczytywanie parametrów wpisywanych w konsoli (np. biblioteka argparse), żeby uruchomić tryb "Backdoor" dla konkretnej daty.
+
+
+
+
+
+
+
+
+Moduł 7: Baza Danych (Rejestrator Logów)
+Opis: Aplikacja musi pamiętać, co zrobiła, żeby w razie awarii można było prześledzić jej historię.
+
+Czego musisz się nauczyć / co musisz ogarnąć:
+
+Wbudowana baza danych sqlite3 (lekka, w jednym pliku, idealna do tego zadania).
+
+Podstawy języka SQL (zapytania CREATE TABLE oraz INSERT INTO).
+
+
+
+
+
+
+
+
+Moduł 8: Automatyzacja (Harmonogram)
+Opis: Ostatni szlif podstawowej wersji aplikacji. Program ma działać sam, o określonej porze.
+
+Czego musisz się nauczyć / co musisz ogarnąć:
+
+Biblioteka schedule w Pythonie do odpalania funkcji o danej godzinie.
+
+Albo alternatywnie: ustawienie systemowego Crona (Linux/Mac) lub Harmonogramu zadań (Windows).
+
+
+
+
+
+
+
+Moduł 9 (Opcjonalny / Punkty Dodatkowe): Kontenery i Chmura
+Opis: Wisienka na torcie – Docker i wrzucenie aplikacji w świat.
+
+Czego musisz się nauczyć / co musisz ogarnąć:
+
+Podstawy pisania pliku Dockerfile.
+
+Różnica między działaniem aplikacji na Twoim komputerze a w chmurze (np. Heroku).

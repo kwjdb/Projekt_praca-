@@ -1,0 +1,23 @@
+komenda do sprawdzania wersjiw terminalu:
+git --version
+
+komenda do tworzenia repozytorium, tworzy ona katalog git-a:
+git init
+
+aby git nie zapisywał jakiegoś pliku w szeczgólności całego środowiska robimy coś takiego, że tworzymy plik
+.gitignore
+który będzie plikiem konfiguracyjnym i zapisane w nim nazwy pliku w takiem formacie :.venv/  nie będą zaciągane do repo
+
+Poelcenie do przypisania danych autora:
+
+git config --global user.name "Hubert"
+git config --global user.email "hub.jatczak@gmail.com"
+
+
+Polecenie do sprawdzania statusu
+git status
+
+
+Przygotuj pliki do zapisu (Staging): Wpisz w terminalu komendę, która wrzuca wszystkie pliki z
+Twojego folderu do "poczekalni" przed zapisem (kropka na końcu oznacza "wszystko"):
+git add .
