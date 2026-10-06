@@ -21,3 +21,6 @@ git status
 Przygotuj pliki do zapisu (Staging): Wpisz w terminalu komendę, która wrzuca wszystkie pliki z
 Twojego folderu do "poczekalni" przed zapisem (kropka na końcu oznacza "wszystko"):
 git add .
+
+
+po tym jak dodamy do buforu komenda git commit -m "tresc "  wypycha cały bufor do repo
