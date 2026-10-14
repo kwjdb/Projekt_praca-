@@ -1,0 +1,10 @@
+GET to jest takie pobierz
+
+Wysyłasz żądanie GET: Mówisz Pythonowi "idź pod ten adres i przynieś mi to, co tam jest".
+
+Serwer odpowiada (Status Code): Serwer (np. NBP) zawsze najpierw rzuca krótkim kodem liczbowym, żeby dać znać, jak poszło.
+200 to OK, 404 to "nie znaleziono", a 500 to błąd ich serwera.
+
+Odbierasz paczkę (Treść): Jeśli było 200, NBP podaje Ci treść. Problem w tym,
+że dla Pythona to jest zaledwie jeden wielki ciąg znaków (tekst). Żebyśmy mogli z tego wyciągnąć konkretną cyferkę (kurs),
+NBP oddaje nam to w formacie JSON – specjalnym standardzie, który Python łatwo potrafi zamienić na swoje wewnętrzne słowniki.
