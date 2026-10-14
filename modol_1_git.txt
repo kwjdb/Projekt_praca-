@@ -24,3 +24,13 @@ git add .
 
 
 po tym jak dodamy do buforu komenda git commit -m "tresc "  wypycha cały bufor do repo
+
+
+
+git status – Pokazuje na czerwono pliki, które zostały zmienione, i na zielono te, które są gotowe do zapisu (to bardzo przydatny nawyk, żeby wiedzieć, co dokładnie za chwilę wyślesz).
+
+git add . – Przenosi wszystkie zmienione pliki do "poczekalni". Kropka na końcu oznacza "dodaj wszystkie zmodyfikowane pliki z tego folderu".
+
+git commit -m "Twój opis zmian" – Tworzy trwały zapis (lokalnego save'a) na Twoim komputerze. Zawsze używaj flagi -m, żeby nie wciągnęło Cię z powrotem do Vima.
+
+git push – Wypycha Twój zapisany kod prosto do chmury na GitHuba.

@@ -1,0 +1,30 @@
+na samej goze sa klasy
+
+kazda klasa ma swoje atrybuty czyli zmienne i to co bedzie pamietac kalsa
+
+kazda klasa ma tez metody czyli funkcje
+
+# 1. Tworzenie klasy
+class NazwaKlasy:
+
+    # 2. Konstruktor (odpala się przy tworzeniu obiektu)
+    def __init__(self, parametr_startowy):
+        self.zmienna_w_plecaku = parametr_startowy  # Zapis z zewnątrz
+        self.inna_zmienna = 0                       # Zapis domyślny
+
+    # 3. Metoda (akcja)
+    def nazwa_metody(self, zwykly_parametr):
+        self.inna_zmienna = self.inna_zmienna + zwykly_parametr
+
+# ==========================================
+# GŁÓWNY KOD (poza klasą, brak wcięć)
+# ==========================================
+
+# 4. Tworzenie obiektu
+moj_obiekt = NazwaKlasy("jakas_wartosc")
+
+# 5. Wywoływanie metody
+moj_obiekt.nazwa_metody(100)
+
+# 6. Odczytanie zmiennej z obiektu
+print(moj_obiekt.inna_zmienna)
