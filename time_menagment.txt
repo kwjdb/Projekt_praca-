@@ -1,0 +1,8 @@
+wtorek sroda czwartek piatek - wywłujemy main za dzien poprzedni
+
+poniedzialek - kurs za piatek, sobote i niedziele i wsytsko do jednego zgłoszenia jira
+
+sobota, niedziela - program sie uruchamia i nic nie robi
+
+dni wolne ustawowo w polsce - aplikacja ma sie uruchamiac sprawdzac to ze jest wolne i to zapisywac
+i w momencie w ktorym wyjdziemy za święto ma pobrać kusr za wszytskie wolne dni
