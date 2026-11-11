@@ -1,6 +1,6 @@
 from openpyxl import load_workbook, Workbook
 
-def utworz_arkusz(sciezka = 'kurs.xlsx',naglowki = ["Data", "Waluta","Kurs NBP"], tytul = "arkusz"):
+def make_workbook(sciezka = 'kurs.xlsx',naglowki = ["Data", "Waluta","Kurs NBP"], tytul = "arkusz"):
     skoroszyt = Workbook()
     arkusz = skoroszyt.active
     arkusz.title = tytul

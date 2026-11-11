@@ -1,4 +1,4 @@
-komenda do sprawdzania wersjiw terminalu:
+ komenda do sprawdzania wersjiw terminalu:
 git --version
 
 komenda do tworzenia repozytorium, tworzy ona katalog git-a:

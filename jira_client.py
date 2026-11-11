@@ -65,23 +65,24 @@ class JiraClient():
 
 
 if __name__ == '__main__':
-    token = input("podaj token: ")
-    jiraklient = JiraClient(token,mail="hub.jatczak@gmail.com")
+    with open("token.txt", "r") as token_file:
+        token_my = token_file.read().strip()
+    jiraklient = JiraClient(token_my,mail="hub.jatczak@gmail.com")
 
-    description = {
-        "type":"doc",
-        "version":1,
-        "content":[
-            {"type": "paragraph",
-                "content":[
-                    {"type": "text", "text": "testowy opis zgloszenia"}
-            ]}
-        ]
-
-    }
-    key = jiraklient.stworz_ticket(project_key = "KAN", summary = "probny ticket", description = description)
-    jiraklient.dodaj_zalacznik(file_path = "faktury_rozliczone.xlsx", ticket_key = key)
-    czy_usunac = input("podaj czy usunac: ")
-    if czy_usunac == "1":
-        jiraklient.usun_wszystkie_tickety(project_key = "KAN")
+    # description = {
+    #     "type":"doc",
+    #     "version":1,
+    #     "content":[
+    #         {"type": "paragraph",
+    #             "content":[
+    #                 {"type": "text", "text": "testowy opis zgloszenia"}
+    #         ]}
+    #     ]
+    #
+    # }
+    # key = jiraklient.stworz_ticket(project_key = "KAN", summary = "probny ticket", description = description)
+    # jiraklient.dodaj_zalacznik(file_path = "faktury_rozliczone.xlsx", ticket_key = key)
+    # czy_usunac = input("podaj czy usunac: ")
+    # if czy_usunac == "1":
+    jiraklient.usun_wszystkie_tickety(project_key = "KAN")
 
