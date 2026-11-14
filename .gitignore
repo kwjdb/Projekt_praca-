@@ -1,6 +1,17 @@
+# Dane wrażliwe i wygenerowane raporty
+token.txt
+*.xlsx
+
+# Pliki pomocnicze Pythona i środowiska
+__pycache__/
 .venv/
 .idea/
-projekt.txt
-*token*.txt
-*.xlsx
-__pycache__/
+
+# Pliki notatek i brudnopisy z nauki
+*.txt
+*nauka*.py
+*testy*.py
+excel_01.py
+jira_client.py
+nbp_client_*.py
+nbp_clinet_*.py
