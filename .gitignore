@@ -13,5 +13,5 @@ __pycache__/
 *testy*.py
 excel_01.py
 jira_client.py
-nbp_client_*.py
-nbp_clinet_*.py
+nbp_client_[0-9]*.py
+nbp_clinet_[0-9]*.py
