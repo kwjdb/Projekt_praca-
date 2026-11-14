@@ -2,3 +2,5 @@
 .idea/
 projekt.txt
 *token*.txt
+*.xlsx
+__pycache__/
