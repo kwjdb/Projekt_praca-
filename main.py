@@ -1,6 +1,7 @@
 import jira_clinet_ang
 import NBP_client_ang
 import excel_02_ang
+import  db_logger
 
 #function witch accept single date as input
 def process_daily_rate(target_date=None):
@@ -11,7 +12,7 @@ def process_daily_rate(target_date=None):
     usd_object = curent_object.get_currency(code = "usd",rate_date = target_date )
     eur_object = curent_object.get_currency(code = "eur", rate_date = target_date )
     #handling excel
-    date_to= usd_object.date
+    date_to = usd_object.date
 
     #["Date", "Currency", "NBP Rate"]
     excel_02_ang.make_workbook(f"{date_to}_file.xlsx")
@@ -34,6 +35,12 @@ def process_daily_rate(target_date=None):
     }
     key = jira_client.create_ticket( project_key='KAN',description=description, summary=f"Exchange rates {date_to}")
     jira_client.add_attachment(ticket_key=key,file_path=f"{date_to}_file.xlsx")
+    # data base handling
+    bd_object = db_logger.DbClient()
+    bd_object.log_db(rate_date=date_to,
+                     currency_rate_eur=eur_object.cost,
+                     currency_rate_usd=usd_object.cost,
+                     jira_ticket=key)
 
 
 #function witch accept list as input
@@ -76,7 +83,16 @@ def process_time_rate(target_date):
     }
     key = jira_client.create_ticket( project_key='KAN',description=description, summary=f"Exchange rates period {period_name}")
     jira_client.add_attachment(ticket_key=key,file_path=f"{period_name}.xlsx")
-
+    #data base handling
+    bd_object = db_logger.DbClient()
+    for i in range (0,len(memory_of_currency),2):
+        date_to = memory_of_currency[i][0]
+        usd_objec =memory_of_currency[i+1][2]
+        eur_objec =memory_of_currency[i][2]
+        bd_object.log_db(rate_date=date_to,
+                         currency_rate_eur=usd_objec,
+                         currency_rate_usd=eur_objec,
+                         jira_ticket=key)
 
 
 if __name__ == '__main__':
